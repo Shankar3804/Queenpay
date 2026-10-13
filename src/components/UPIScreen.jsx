@@ -313,7 +313,7 @@ export default function UPIScreen({ stats = {}, currentUser, showToast, updateSt
             </label>
             <input
               type="text"
-              placeholder="e.g. mobile@upi or q005726489@ybl"
+              placeholder="e.g. mobile@upi or Q053568928@ybl"
               value={upiId}
               onChange={(e) => setUpiId(e.target.value)}
               required

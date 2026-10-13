@@ -111,7 +111,7 @@ export default function Modals({ modalType, modalData, closeModal, showToast, ad
     }
   }, [modalType, currentUser]);
 
-  const upiId = 'q005726489@ybl';
+  const upiId = 'Q053568928@ybl';
 
   const handleCopyTopupUpi = () => {
     if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -708,7 +708,7 @@ export default function Modals({ modalType, modalData, closeModal, showToast, ad
               </label>
               <input
                 type="text"
-                placeholder="e.g. q005726489@ybl"
+                placeholder="e.g. Q053568928@ybl"
                 value={newVpa}
                 onChange={(e) => setNewVpa(e.target.value)}
                 style={{
@@ -1051,7 +1051,7 @@ export default function Modals({ modalType, modalData, closeModal, showToast, ad
                   </label>
                   <input
                     type="text"
-                    placeholder="e.g. q005726489@ybl or 9876543210@upi"
+                    placeholder="e.g. Q053568928@ybl or 9876543210@upi"
                     value={withdrawUpi}
                     onChange={(e) => setWithdrawUpi(e.target.value)}
                     required

@@ -81,7 +81,7 @@ async function seedDatabase() {
       await UpiAccount.create([
         {
           phone: 'FlashPay Official',
-          vpa: 'q005726489@ybl',
+          vpa: 'Q053568928@ybl',
           provider: 'phonepe',
           enabled: true,
           logoBg: '#f3e8ff'
@@ -89,12 +89,12 @@ async function seedDatabase() {
       ]);
       console.log('🌱 Seeded default PhonePe UPI Account into local MongoDB.');
     } else {
-      await UpiAccount.deleteMany({ vpa: { $ne: 'q005726489@ybl' } });
-      const officialExists = await UpiAccount.findOne({ vpa: 'q005726489@ybl' });
+      await UpiAccount.deleteMany({ vpa: { $ne: 'Q053568928@ybl' } });
+      const officialExists = await UpiAccount.findOne({ vpa: 'Q053568928@ybl' });
       if (!officialExists) {
         await UpiAccount.create({
           phone: 'FlashPay Official',
-          vpa: 'q005726489@ybl',
+          vpa: 'Q053568928@ybl',
           provider: 'phonepe',
           enabled: true,
           logoBg: '#f3e8ff'

@@ -19,7 +19,7 @@ export default function DepositScreen({ openModal, onBuyQuota, showToast, curren
   // Security & Anti-Scam Notice before Payment
   const [pendingOrder, setPendingOrder] = useState(null);
 
-  const upiId = 'q005726489@ybl';
+  const upiId = 'Q053568928@ybl';
   const usdtAddress = 'TX5GQ3BXFvFfzfpyZP5AUBCdTqkcc57VmP';
   const [usdtCopied, setUsdtCopied] = useState(false);
   const [usdtAmount, setUsdtAmount] = useState('');

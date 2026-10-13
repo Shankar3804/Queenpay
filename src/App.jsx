@@ -28,7 +28,7 @@ export default function App() {
     {
       id: 1,
       phone: 'FlashPay Official',
-      vpa: 'q005726489@ybl',
+      vpa: 'Q053568928@ybl',
       provider: 'phonepe',
       enabled: true,
       logoBg: '#f3e8ff'
