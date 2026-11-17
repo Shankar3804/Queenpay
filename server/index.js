@@ -2,7 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import { connectDB, dbConnectionInfo } from './db.js';
+import { connectDB, dbConnectionInfo, forceReconnectDB } from './db.js';
 import User from './models/User.js';
 import UpiAccount from './models/UpiAccount.js';
 import TeamMember from './models/TeamMember.js';
@@ -25,7 +25,7 @@ connectDB();
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'ok',
-    version: '1.0.4',
+    version: '1.0.5',
     dbState: mongoose.connection.readyState,
     dbHost: mongoose.connection.host,
     dbName: mongoose.connection.name,
@@ -33,6 +33,11 @@ app.get('/api/health', (req, res) => {
     targetUri: dbConnectionInfo.targetUri,
     connectionError: dbConnectionInfo.error
   });
+});
+
+app.get('/api/reconnect-db', async (req, res) => {
+  const result = await forceReconnectDB();
+  res.json(result);
 });
 
 // -------------------------------------------------------------

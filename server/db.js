@@ -10,6 +10,36 @@ export const dbConnectionInfo = {
   error: null
 };
 
+let retryInterval = null;
+
+export async function forceReconnectDB() {
+  const defaultAtlasUri = 'mongodb+srv://gr28420_db_user:e07W8NeaThZeG0ib@cluster0.kdunhec.mongodb.net/queenpay?appName=QueenPay';
+  const targetUri = process.env.MONGODB_URI || defaultAtlasUri;
+
+  try {
+    await mongoose.disconnect();
+    await mongoose.connect(targetUri, { serverSelectionTimeoutMS: 6000 });
+    dbConnectionInfo.isFallback = false;
+    dbConnectionInfo.error = null;
+    if (retryInterval) {
+      clearInterval(retryInterval);
+      retryInterval = null;
+    }
+    console.log('✅ Reconnected successfully to MongoDB Atlas cluster!');
+    await seedDatabase();
+    return { success: true, host: mongoose.connection.host, name: mongoose.connection.name };
+  } catch (err) {
+    dbConnectionInfo.isFallback = true;
+    dbConnectionInfo.error = err.message;
+    try {
+      const { MongoMemoryServer } = await import('mongodb-memory-server');
+      const mongoServer = await MongoMemoryServer.create();
+      await mongoose.connect(mongoServer.getUri());
+    } catch (e) {}
+    return { success: false, error: err.message };
+  }
+}
+
 export async function connectDB() {
   const defaultAtlasUri = 'mongodb+srv://gr28420_db_user:e07W8NeaThZeG0ib@cluster0.kdunhec.mongodb.net/queenpay?appName=QueenPay';
   const targetUri = process.env.MONGODB_URI || defaultAtlasUri;
@@ -24,6 +54,10 @@ export async function connectDB() {
     console.log('✅ Connected successfully to MongoDB!');
     dbConnectionInfo.isFallback = false;
     dbConnectionInfo.error = null;
+    if (retryInterval) {
+      clearInterval(retryInterval);
+      retryInterval = null;
+    }
   } catch (err) {
     console.log('⚠️ Primary MongoDB connection failed. Starting fallback MongoDB instance...', err.message);
     dbConnectionInfo.isFallback = true;
@@ -36,6 +70,29 @@ export async function connectDB() {
       console.log(`✅ Connected to local MongoDB instance at: ${mongoUri}`);
     } catch (memErr) {
       console.error('❌ Failed to start fallback MongoDB server:', memErr);
+    }
+
+    // Auto-retry connecting to Atlas in the background every 15 seconds
+    if (!retryInterval) {
+      retryInterval = setInterval(async () => {
+        try {
+          const testConn = await mongoose.createConnection(targetUri, { serverSelectionTimeoutMS: 4000 }).asPromise();
+          if (testConn.readyState === 1) {
+            console.log('🔄 Atlas cluster is reachable! Switching to Atlas...');
+            clearInterval(retryInterval);
+            retryInterval = null;
+            await testConn.close();
+            await mongoose.disconnect();
+            await mongoose.connect(targetUri);
+            dbConnectionInfo.isFallback = false;
+            dbConnectionInfo.error = null;
+            console.log('🎉 Successfully connected to Atlas cluster:', mongoose.connection.host);
+            await seedDatabase();
+          }
+        } catch (retryErr) {
+          // Atlas still blocked or unreachable
+        }
+      }, 15000);
     }
   }
 
