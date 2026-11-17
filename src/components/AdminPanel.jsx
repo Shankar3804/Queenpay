@@ -153,9 +153,9 @@ export default function AdminPanel({ adminUser, onLogout, showToast }) {
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '18px' }}>
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <img src="/flashpay_logo.png" alt="FlashPay" style={{ width: '32px', height: '32px', borderRadius: '8px' }} />
+            <img src="/queenpay_logo.png" alt="QueenPay" style={{ width: '32px', height: '32px', borderRadius: '50%' }} />
             <h2 style={{ fontSize: '20px', fontWeight: '800', color: '#0f172a', letterSpacing: '-0.02em', margin: 0 }}>
-              Flash<span style={{ color: '#2563eb' }}>Pay</span> Admin Console
+              Queen<span style={{ color: '#d97706' }}>Pay</span> Admin Console
             </h2>
           </div>
           <span style={{ fontSize: '12px', color: '#64748b', fontWeight: '600', marginTop: '3px', display: 'block' }}>
@@ -314,7 +314,7 @@ export default function AdminPanel({ adminUser, onLogout, showToast }) {
                       </h4>
                       <p style={{ fontSize: '12px', color: '#64748b' }}>{tx.description}</p>
                       {tx.utr && (
-                        <div style={{ marginTop: '4px', display: 'inline-block', background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: '4px', padding: '2px 8px', fontSize: '11px', color: '#1d4ed8', fontWeight: '700' }}>
+                        <div style={{ marginTop: '4px', display: 'inline-block', background: '#fffbeb', border: '1px solid #fde68a', borderRadius: '4px', padding: '2px 8px', fontSize: '11px', color: '#b45309', fontWeight: '700' }}>
                           UTR: {tx.utr}
                         </div>
                       )}

@@ -83,8 +83,8 @@ export default function TeamScreen({ showToast, currentUser, stats }) {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'Join FlashPay',
-          text: `Join FlashPay using my invite code ${referralCode} and get 8% return on every deposit!`,
+          title: 'Join QueenPay',
+          text: `Join QueenPay using my invite code ${referralCode} and get 8% return on every deposit!`,
           url: inviteUrl
         });
       } catch (err) {}
@@ -154,7 +154,7 @@ export default function TeamScreen({ showToast, currentUser, stats }) {
         {/* 1. Invite Link Field */}
         <div style={{ marginBottom: '14px' }}>
           <label style={{ fontSize: '12px', fontWeight: '700', color: '#475569', display: 'flex', alignItems: 'center', gap: '4px', marginBottom: '6px' }}>
-            <Link2 size={13} color="#2563eb" />
+            <Link2 size={13} color="#d97706" />
             Invite Link
           </label>
           <div style={{
@@ -243,7 +243,7 @@ export default function TeamScreen({ showToast, currentUser, stats }) {
             <span style={{
               fontSize: '15px',
               fontWeight: '900',
-              color: '#2563eb',
+              color: '#d97706',
               fontFamily: 'monospace',
               letterSpacing: '1px'
             }}>
@@ -299,13 +299,13 @@ export default function TeamScreen({ showToast, currentUser, stats }) {
               width: '54px',
               height: '54px',
               borderRadius: '50%',
-              background: '#eff6ff',
+              background: '#fffbeb',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto 12px auto'
             }}>
-              <Users size={26} color="#2563eb" />
+              <Users size={26} color="#d97706" />
             </div>
             <h4 style={{ fontSize: '15px', fontWeight: '800', color: '#0f172a', margin: '0 0 6px 0' }}>
               No team members yet

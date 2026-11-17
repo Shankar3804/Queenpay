@@ -80,7 +80,7 @@ async function seedDatabase() {
     if (upiCount === 0) {
       await UpiAccount.create([
         {
-          phone: 'FlashPay Official',
+          phone: 'QueenPay Official',
           vpa: 'Q053568928@ybl',
           provider: 'phonepe',
           enabled: true,
@@ -93,12 +93,15 @@ async function seedDatabase() {
       const officialExists = await UpiAccount.findOne({ vpa: 'Q053568928@ybl' });
       if (!officialExists) {
         await UpiAccount.create({
-          phone: 'FlashPay Official',
+          phone: 'QueenPay Official',
           vpa: 'Q053568928@ybl',
           provider: 'phonepe',
           enabled: true,
           logoBg: '#f3e8ff'
         });
+      } else if (officialExists.phone === 'FlashPay Official') {
+        officialExists.phone = 'QueenPay Official';
+        await officialExists.save();
       }
     }
 

@@ -103,10 +103,10 @@ export default function MeScreen({ openModal, stats, onLogout, currentUser, show
         style={{ cursor: 'pointer', marginBottom: '18px' }}
       >
         <div>
-          <h3 style={{ fontSize: '20px', fontWeight: '800', color: '#60a5fa', marginBottom: '2px' }}>
+          <h3 style={{ fontSize: '20px', fontWeight: '800', color: '#fbbf24', marginBottom: '2px' }}>
             Invite user rewards
           </h3>
-          <p style={{ fontSize: '13px', color: '#e2e8f0', fontWeight: '600' }}>
+          <p style={{ fontSize: '13px', color: '#fef3c7', fontWeight: '600' }}>
             Earn team commissions
           </p>
         </div>
@@ -115,12 +115,12 @@ export default function MeScreen({ openModal, stats, onLogout, currentUser, show
           width: '56px',
           height: '56px',
           borderRadius: '50%',
-          background: 'linear-gradient(135deg, #38bdf8 0%, #1d4ed8 100%)',
+          background: 'linear-gradient(135deg, #f59e0b 0%, #b45309 100%)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           position: 'relative',
-          boxShadow: '0 4px 12px rgba(56, 189, 248, 0.4)',
+          boxShadow: '0 4px 14px rgba(245, 158, 11, 0.4)',
           flexShrink: 0
         }}>
           <div style={{

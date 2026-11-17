@@ -27,7 +27,7 @@ export default function App() {
   const [upiAccounts, setUpiAccounts] = useState([
     {
       id: 1,
-      phone: 'FlashPay Official',
+      phone: 'QueenPay Official',
       vpa: 'Q053568928@ybl',
       provider: 'phonepe',
       enabled: true,
@@ -54,9 +54,9 @@ export default function App() {
       const ref = params.get('ref') || params.get('code');
       if (ref) {
         setRefCodeParam(ref);
-        localStorage.setItem('flashpay_ref_code', ref);
+        localStorage.setItem('queenpay_ref_code', ref);
       } else {
-        const cached = localStorage.getItem('flashpay_ref_code');
+        const cached = localStorage.getItem('queenpay_ref_code') || localStorage.getItem('flashpay_ref_code');
         if (cached) setRefCodeParam(cached);
       }
     } catch (e) {}
@@ -71,7 +71,7 @@ export default function App() {
 
   // Check saved session in localStorage
   useEffect(() => {
-    const savedUser = localStorage.getItem('flashpay_user') || localStorage.getItem('elephant_user');
+    const savedUser = localStorage.getItem('queenpay_user') || localStorage.getItem('flashpay_user') || localStorage.getItem('elephant_user');
     if (savedUser) {
       try {
         setCurrentUser(JSON.parse(savedUser));
@@ -109,11 +109,12 @@ export default function App() {
 
   const handleLoginSuccess = (userData) => {
     setCurrentUser(userData);
-    localStorage.setItem('flashpay_user', JSON.stringify(userData));
+    localStorage.setItem('queenpay_user', JSON.stringify(userData));
   };
 
   const handleLogout = () => {
     setCurrentUser(null);
+    localStorage.removeItem('queenpay_user');
     localStorage.removeItem('flashpay_user');
     localStorage.removeItem('elephant_user');
     showToast('Signed out successfully.');
@@ -206,13 +207,13 @@ export default function App() {
         }}>
           <div style={{ textAlign: 'center', padding: '20px' }}>
             <img
-              src="/flashpay_logo.png"
-              alt="FlashPay"
+              src="/queenpay_logo.png"
+              alt="QueenPay"
               style={{
                 width: '92px',
                 height: '92px',
-                borderRadius: '22px',
-                boxShadow: '0 10px 30px rgba(37, 99, 235, 0.28)',
+                borderRadius: '50%',
+                boxShadow: '0 10px 30px rgba(217, 119, 6, 0.35)',
                 margin: '0 auto 16px auto',
                 display: 'block',
                 animation: 'scaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1)'
@@ -225,7 +226,7 @@ export default function App() {
               letterSpacing: '-0.5px',
               margin: '0 0 4px 0'
             }}>
-              Flash<span style={{ color: '#2563eb' }}>Pay</span>
+              Queen<span style={{ color: '#d97706' }}>Pay</span>
             </h1>
             <p style={{ fontSize: '13px', color: '#64748b', fontWeight: '500', margin: '0 0 24px 0' }}>
               Fast & Secure Payments
@@ -243,7 +244,7 @@ export default function App() {
               <div style={{
                 width: '60px',
                 height: '100%',
-                background: '#2563eb',
+                background: 'linear-gradient(90deg, #d97706, #f59e0b)',
                 borderRadius: '99px',
                 animation: 'progressAnim 1s ease-in-out infinite'
               }} />

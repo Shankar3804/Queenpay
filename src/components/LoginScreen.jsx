@@ -113,19 +113,19 @@ export default function LoginScreen({ onLoginSuccess, showToast, initialRefCode 
       {/* Brand Header */}
       <div style={{ textAlign: 'center', marginBottom: '20px' }}>
         <img
-          src="/flashpay_logo.png"
-          alt="FlashPay Logo"
+          src="/queenpay_logo.png"
+          alt="QueenPay Logo"
           style={{
             width: '74px',
             height: '74px',
-            borderRadius: '18px',
+            borderRadius: '50%',
             margin: '0 auto 10px auto',
             display: 'block',
-            boxShadow: '0 8px 24px rgba(37, 99, 235, 0.25)'
+            boxShadow: '0 8px 24px rgba(217, 119, 6, 0.3)'
           }}
         />
         <h2 style={{ fontSize: '24px', fontWeight: '900', color: '#0f172a', letterSpacing: '-0.5px', margin: 0 }}>
-          Flash<span style={{ color: '#2563eb' }}>Pay</span>
+          Queen<span style={{ color: '#d97706' }}>Pay</span>
         </h2>
         <p style={{ fontSize: '13px', color: '#64748b', fontWeight: '500', marginTop: '2px' }}>
           Fast & Secure Payments
@@ -368,7 +368,7 @@ export default function LoginScreen({ onLoginSuccess, showToast, initialRefCode 
                   border: '1px solid #cbd5e1',
                   fontSize: '13px',
                   fontWeight: '600',
-                  color: '#2563eb',
+                  color: '#d97706',
                   fontFamily: 'monospace',
                   outline: 'none',
                   background: '#ffffff',

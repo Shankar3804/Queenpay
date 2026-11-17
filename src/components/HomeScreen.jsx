@@ -48,7 +48,7 @@ export default function HomeScreen({ openModal, stats, setActiveTab }) {
       badges: ['✓ 0.8% Per Recharge', '👥 Unlimited Team', '💸 Auto Payouts'],
       btnText: 'VIEW TEAM REWARDS',
       btnBg: '#d97706',
-      bgGradient: 'linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 50%, #2563eb 100%)',
+      bgGradient: 'linear-gradient(135deg, #1c1917 0%, #451a03 50%, #78350f 100%)',
       imgSrc: '/banner_referral_team.jpg',
       action: () => setActiveTab && setActiveTab('team')
     }
@@ -75,20 +75,20 @@ export default function HomeScreen({ openModal, stats, setActiveTab }) {
 
   return (
     <div className="home-screen">
-      {/* Header with FlashPay Logo */}
+      {/* Header with QueenPay Logo */}
       <div className="screen-header" style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
         <img
-          src="/flashpay_logo.png"
-          alt="FlashPay Logo"
+          src="/queenpay_logo.png"
+          alt="QueenPay Logo"
           style={{
             width: '38px',
             height: '38px',
-            borderRadius: '10px',
-            boxShadow: '0 2px 8px rgba(37, 99, 235, 0.25)'
+            borderRadius: '50%',
+            boxShadow: '0 2px 8px rgba(217, 119, 6, 0.25)'
           }}
         />
         <h1 className="screen-title" style={{ fontSize: '24px', fontWeight: '900', color: '#0f172a', margin: 0, letterSpacing: '-0.5px' }}>
-          Flash<span style={{ color: '#2563eb' }}>Pay</span>
+          Queen<span style={{ color: '#d97706' }}>Pay</span>
         </h1>
       </div>
 
@@ -322,7 +322,7 @@ export default function HomeScreen({ openModal, stats, setActiveTab }) {
                 width: currentSlide === idx ? '22px' : '6px',
                 height: '6px',
                 borderRadius: '99px',
-                background: currentSlide === idx ? '#2563eb' : '#cbd5e1',
+                background: currentSlide === idx ? '#d97706' : '#cbd5e1',
                 border: 'none',
                 padding: 0,
                 cursor: 'pointer',
@@ -393,13 +393,13 @@ export default function HomeScreen({ openModal, stats, setActiveTab }) {
           position: 'absolute',
           top: '-6px',
           right: '8px',
-          background: 'linear-gradient(135deg, #818cf8 0%, #6366f1 100%)',
+          background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
           color: '#ffffff',
           fontSize: '10px',
           fontWeight: '800',
           padding: '3px 10px',
           borderRadius: '12px 12px 12px 0',
-          boxShadow: '0 2px 6px rgba(99, 102, 241, 0.4)',
+          boxShadow: '0 2px 6px rgba(217, 119, 6, 0.35)',
           display: 'flex',
           alignItems: 'center',
           gap: '3px',

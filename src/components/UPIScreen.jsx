@@ -497,8 +497,8 @@ export default function UPIScreen({ stats = {}, currentUser, showToast, updateSt
                   width: '32px',
                   height: '32px',
                   borderRadius: '50%',
-                  background: '#eff6ff',
-                  color: '#2563eb',
+                  background: '#fffbeb',
+                  color: '#d97706',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
@@ -542,7 +542,7 @@ export default function UPIScreen({ stats = {}, currentUser, showToast, updateSt
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <span style={{ fontSize: '12px', color: '#64748b', fontWeight: '600' }}>Payout To</span>
-                <span style={{ fontSize: '12px', fontWeight: '700', color: '#2563eb' }}>
+                <span style={{ fontSize: '12px', fontWeight: '700', color: '#d97706' }}>
                   {payoutMethod === 'UPI' ? upiId : `${holderName} (A/C: ${accountNumber})`}
                 </span>
               </div>
@@ -661,8 +661,8 @@ export default function UPIScreen({ stats = {}, currentUser, showToast, updateSt
                   width: '32px',
                   height: '32px',
                   borderRadius: '50%',
-                  background: '#eff6ff',
-                  color: '#2563eb',
+                  background: '#fffbeb',
+                  color: '#d97706',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'

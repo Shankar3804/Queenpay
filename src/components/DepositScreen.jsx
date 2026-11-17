@@ -805,7 +805,7 @@ export default function DepositScreen({ openModal, onBuyQuota, showToast, curren
               </div>
               <div style={{ textAlign: 'right' }}>
                 <span style={{ fontSize: '11px', color: '#059669', fontWeight: '800' }}>Income +{pendingOrder.income} ({pendingOrder.rate})</span>
-                <div style={{ fontSize: '12px', fontWeight: '700', color: '#2563eb' }}>
+                <div style={{ fontSize: '12px', fontWeight: '700', color: '#d97706' }}>
                   Quota +{pendingOrder.quota}
                 </div>
               </div>
@@ -849,8 +849,8 @@ export default function DepositScreen({ openModal, onBuyQuota, showToast, curren
 
               {/* Point 2: Changes every 15 days */}
               <div style={{
-                background: '#eff6ff',
-                border: '1px solid #bfdbfe',
+                background: '#fffbeb',
+                border: '1px solid #fde68a',
                 borderRadius: '12px',
                 padding: '10px 12px',
                 display: 'flex',
@@ -862,7 +862,7 @@ export default function DepositScreen({ openModal, onBuyQuota, showToast, curren
                   width: '24px',
                   height: '24px',
                   borderRadius: '6px',
-                  background: '#2563eb',
+                  background: '#d97706',
                   color: '#ffffff',
                   display: 'flex',
                   alignItems: 'center',
@@ -874,8 +874,8 @@ export default function DepositScreen({ openModal, onBuyQuota, showToast, curren
                 }}>
                   15D
                 </div>
-                <div style={{ fontSize: '12px', color: '#1e40af', lineHeight: '1.4' }}>
-                  <span style={{ fontWeight: '800', color: '#1d4ed8', display: 'block', marginBottom: '2px' }}>
+                <div style={{ fontSize: '12px', color: '#92400e', lineHeight: '1.4' }}>
+                  <span style={{ fontWeight: '800', color: '#b45309', display: 'block', marginBottom: '2px' }}>
                     Updated Every 15 Days
                   </span>
                   Please note that our official UPI ID and QR scanner change every 15 days for banking safety. Always make payments using the live scanner shown on the screen—never reuse old saved accounts.
@@ -911,7 +911,7 @@ export default function DepositScreen({ openModal, onBuyQuota, showToast, curren
                   <span style={{ fontWeight: '800', color: '#be123c', display: 'block', marginBottom: '2px' }}>
                     Stay Away from Scammers!
                   </span>
-                  Never transfer money to personal UPI IDs, Telegram/WhatsApp agents, or unverified links claiming to represent FlashPay. FlashPay will never ask you to pay into any personal account.
+                  Never transfer money to personal UPI IDs, Telegram/WhatsApp agents, or unverified links claiming to represent QueenPay. QueenPay will never ask you to pay into any personal account.
                 </div>
               </div>
 

@@ -1097,7 +1097,7 @@ export default function Modals({ modalType, modalData, closeModal, showToast, ad
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <span style={{ fontSize: '12px', color: '#64748b', fontWeight: '600' }}>UPI Destination</span>
-                    <span style={{ fontSize: '13px', fontWeight: '700', color: '#2563eb' }}>{withdrawUpi}</span>
+                    <span style={{ fontSize: '13px', fontWeight: '700', color: '#d97706' }}>{withdrawUpi}</span>
                   </div>
                 </div>
 
@@ -1206,8 +1206,8 @@ export default function Modals({ modalType, modalData, closeModal, showToast, ad
                     width: '48px',
                     height: '48px',
                     borderRadius: '50%',
-                    background: '#eff6ff',
-                    color: '#2563eb',
+                    background: '#fffbeb',
+                    color: '#d97706',
                     display: 'inline-flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -1371,8 +1371,8 @@ export default function Modals({ modalType, modalData, closeModal, showToast, ad
                 width: '56px',
                 height: '56px',
                 borderRadius: '50%',
-                background: '#eff6ff',
-                color: '#2563eb',
+                background: '#fffbeb',
+                color: '#d97706',
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -1821,7 +1821,7 @@ export default function Modals({ modalType, modalData, closeModal, showToast, ad
         {(modalType === 'contact' || modalType === 'contactUs') && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', padding: '4px 0 10px 0' }}>
             <p style={{ fontSize: '13px', color: '#64748b', margin: '0 0 2px 0', lineHeight: '1.4' }}>
-              Connect with our official FlashPay community and customer support channels on Telegram:
+              Connect with our official QueenPay community and customer support channels on Telegram:
             </p>
 
             {/* Official Channel Card */}

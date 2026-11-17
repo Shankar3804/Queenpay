@@ -1,6 +1,6 @@
-# FlashPay - Fast & Secure INR/USDT Payment Platform
+# QueenPay - Fast & Secure INR/USDT Payment Platform
 
-FlashPay is a high-performance modern fintech & quota management web application built with **React 19**, **Vite**, **Express**, and **MongoDB**. It provides seamless UPI & crypto (USDT TRC-20) recharges, task earning with 8% guaranteed return, 0.8% multi-tier team referral commissions, interactive lucky wheel rewards, and request-time Security MPIN withdrawals.
+QueenPay is a high-performance modern fintech & quota management web application built with **React 19**, **Vite**, **Express**, and **MongoDB**. It provides seamless UPI & crypto (USDT TRC-20) recharges, task earning with 8% guaranteed return, 0.8% multi-tier team referral commissions, interactive lucky wheel rewards, and request-time Security MPIN withdrawals.
 
 ---
 

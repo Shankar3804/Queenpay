@@ -634,5 +634,5 @@ app.get('/api/team', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 FlashPay Auth & Admin Express Server running on http://localhost:${PORT}`);
+  console.log(`🚀 QueenPay Auth & Admin Express Server running on http://localhost:${PORT}`);
 });

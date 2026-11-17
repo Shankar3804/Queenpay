@@ -25,23 +25,23 @@ export default function Navbar({ activeTab, setActiveTab }) {
               {tab.id === 'me' ? (
                 // Custom Speech Bubble Icon matching the "Me" icon in screenshots
                 <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill={isActive ? '#000000' : 'none'} stroke={isActive ? '#000000' : '#8e8e93'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill={isActive ? '#b45309' : 'none'} stroke={isActive ? '#b45309' : '#8e8e93'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                     {isActive && <circle cx="12" cy="10" r="2.5" fill="#ffffff" />}
                   </svg>
                 </div>
               ) : tab.id === 'team' ? (
                 // Layout grid icon matching "Team" tab
-                <svg width="22" height="22" viewBox="0 0 24 24" fill={isActive ? '#000000' : 'none'} stroke={isActive ? '#000000' : '#8e8e93'} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="3" y="3" width="8" height="8" rx="2" fill={isActive ? '#000000' : 'none'}></rect>
-                  <rect x="13" y="3" width="8" height="8" rx="2" fill={isActive ? '#000000' : 'none'}></rect>
-                  <rect x="3" y="13" width="8" height="8" rx="2" fill={isActive ? '#000000' : 'none'}></rect>
-                  <rect x="13" y="13" width="8" height="8" rx="2" fill={isActive ? '#000000' : 'none'}></rect>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill={isActive ? '#b45309' : 'none'} stroke={isActive ? '#b45309' : '#8e8e93'} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="3" width="8" height="8" rx="2" fill={isActive ? '#b45309' : 'none'}></rect>
+                  <rect x="13" y="3" width="8" height="8" rx="2" fill={isActive ? '#b45309' : 'none'}></rect>
+                  <rect x="3" y="13" width="8" height="8" rx="2" fill={isActive ? '#b45309' : 'none'}></rect>
+                  <rect x="13" y="13" width="8" height="8" rx="2" fill={isActive ? '#b45309' : 'none'}></rect>
                 </svg>
               ) : tab.id === 'upi' ? (
                 // Briefcase icon matching "UPI" tab
-                <svg width="22" height="22" viewBox="0 0 24 24" fill={isActive ? '#000000' : 'none'} stroke={isActive ? '#000000' : '#8e8e93'} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="7" width="20" height="14" rx="3" fill={isActive ? '#000000' : 'none'}></rect>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill={isActive ? '#b45309' : 'none'} stroke={isActive ? '#b45309' : '#8e8e93'} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="3" fill={isActive ? '#b45309' : 'none'}></rect>
                   <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
                 </svg>
               ) : tab.id === 'deposit' ? (
@@ -50,7 +50,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
                   width: '26px',
                   height: '26px',
                   borderRadius: '50%',
-                  background: isActive ? '#000000' : '#8e8e93',
+                  background: isActive ? 'linear-gradient(135deg, #d97706 0%, #b45309 100%)' : '#8e8e93',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
@@ -64,7 +64,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
                 </div>
               ) : (
                 // Home icon matching "Home" tab
-                <svg width="22" height="22" viewBox="0 0 24 24" fill={isActive ? '#000000' : 'none'} stroke={isActive ? '#000000' : '#8e8e93'} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill={isActive ? '#b45309' : 'none'} stroke={isActive ? '#b45309' : '#8e8e93'} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                   <polyline points="9 22 9 12 15 12 15 22" fill={isActive ? '#ffffff' : 'none'}></polyline>
                 </svg>

@@ -4,16 +4,20 @@
   --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --bg-app: #ffffff;
   --bg-card: #ffffff;
-  --bg-dark-card: #0f172a;
+  --bg-dark-card: #18181b;
   --text-primary: #0f172a;
   --text-secondary: #475569;
   --text-muted: #94a3b8;
   --accent-teal: #059669;
   --accent-teal-bg: #ecfdf5;
-  --accent-blue: #2563eb;
+  --accent-blue: #d97706;
+  --accent-gold: #d97706;
+  --accent-gold-hover: #b45309;
+  --accent-gold-light: #fffbeb;
+  --accent-gold-border: #fde68a;
   --accent-indigo: #4f46e5;
   --accent-green-tag: #10b981;
-  --btn-dark: #0f172a;
+  --btn-dark: #18181b;
   --border-light: #f1f5f9;
   --shadow-subtle: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
   --shadow-card: 0 2px 8px -1px rgba(0, 0, 0, 0.04);
@@ -158,7 +162,7 @@ body {
 }
 
 .nav-item.active {
-  color: #0f172a;
+  color: #b45309;
   font-weight: 700;
 }
 
@@ -181,14 +185,15 @@ body {
   border: 1px solid var(--border-light);
 }
 
-/* Dark Summary Card */
+/* Dark Summary Card with subtle Royal Gold border & gradient */
 .dark-summary-card {
-  background: #0f172a;
+  background: linear-gradient(145deg, #18181b 0%, #09090b 100%);
   color: #ffffff;
   border-radius: var(--radius-lg);
   padding: 22px 18px;
   margin-bottom: 20px;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(217, 119, 6, 0.2);
 }
 
 .dark-card-numbers {
@@ -220,11 +225,11 @@ body {
   font-weight: 700;
 }
 
-/* Buttons */
+/* Buttons with refined dark obsidian and gold rim */
 .btn-black {
-  background: #0f172a;
+  background: #18181b;
   color: #ffffff;
-  border: none;
+  border: 1px solid rgba(217, 119, 6, 0.28);
   border-radius: var(--radius-full);
   padding: 10px 22px;
   font-weight: 700;
@@ -233,11 +238,13 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.15s ease, transform 0.1s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.15s ease;
 }
 
 .btn-black:hover {
-  background: #1e293b;
+  background: #27272a;
+  border-color: rgba(217, 119, 6, 0.55);
 }
 
 .btn-black:active {
@@ -353,18 +360,19 @@ body {
 
 /* Banners */
 .lucky-banner {
-  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 60%, #311075 100%);
+  background: linear-gradient(135deg, #18181b 0%, #2e1065 60%, #581c87 100%);
   border-radius: var(--radius-lg);
   padding: 16px;
   color: #fff;
   position: relative;
   overflow: hidden;
   margin-bottom: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(217, 119, 6, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
 .invite-banner {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  background: linear-gradient(135deg, #18181b 0%, #27272a 60%, #451a03 100%);
   border-radius: var(--radius-lg);
   padding: 16px 20px;
   color: #fff;
@@ -372,7 +380,8 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(217, 119, 6, 0.25);
+  box-shadow: 0 4px 16px rgba(217, 119, 6, 0.1);
 }
 
 /* Modal Overlay */
