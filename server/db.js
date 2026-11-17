@@ -4,19 +4,30 @@ import UpiAccount from './models/UpiAccount.js';
 import TeamMember from './models/TeamMember.js';
 import Transaction from './models/Transaction.js';
 
+export const dbConnectionInfo = {
+  targetUri: '',
+  isFallback: false,
+  error: null
+};
+
 export async function connectDB() {
   const defaultAtlasUri = 'mongodb+srv://gr28420_db_user:e07W8NeaThZeG0ib@cluster0.kdunhec.mongodb.net/queenpay?appName=QueenPay';
   const targetUri = process.env.MONGODB_URI || defaultAtlasUri;
+  const masked = targetUri.replace(/:([^:@]+)@/, ':****@');
+  dbConnectionInfo.targetUri = masked;
 
   try {
-    const masked = targetUri.replace(/:([^:@]+)@/, ':****@');
     console.log(`Connecting to MongoDB at: ${masked}...`);
     await mongoose.connect(targetUri, {
       serverSelectionTimeoutMS: 6000
     });
     console.log('✅ Connected successfully to MongoDB!');
+    dbConnectionInfo.isFallback = false;
+    dbConnectionInfo.error = null;
   } catch (err) {
     console.log('⚠️ Primary MongoDB connection failed. Starting fallback MongoDB instance...', err.message);
+    dbConnectionInfo.isFallback = true;
+    dbConnectionInfo.error = err.message;
     try {
       const { MongoMemoryServer } = await import('mongodb-memory-server');
       const mongoServer = await MongoMemoryServer.create();

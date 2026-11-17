@@ -2,7 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import { connectDB } from './db.js';
+import { connectDB, dbConnectionInfo } from './db.js';
 import User from './models/User.js';
 import UpiAccount from './models/UpiAccount.js';
 import TeamMember from './models/TeamMember.js';
@@ -25,10 +25,13 @@ connectDB();
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'ok',
-    version: '1.0.3',
+    version: '1.0.4',
     dbState: mongoose.connection.readyState,
     dbHost: mongoose.connection.host,
-    dbName: mongoose.connection.name
+    dbName: mongoose.connection.name,
+    isFallbackMemory: dbConnectionInfo.isFallback,
+    targetUri: dbConnectionInfo.targetUri,
+    connectionError: dbConnectionInfo.error
   });
 });
 
