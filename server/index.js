@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
+import mongoose from 'mongoose';
 import { connectDB } from './db.js';
 import User from './models/User.js';
 import UpiAccount from './models/UpiAccount.js';
@@ -20,6 +21,16 @@ app.use(express.json());
 
 // Initialize MongoDB connection
 connectDB();
+
+app.get('/api/health', (req, res) => {
+  res.json({
+    status: 'ok',
+    version: '1.0.3',
+    dbState: mongoose.connection.readyState,
+    dbHost: mongoose.connection.host,
+    dbName: mongoose.connection.name
+  });
+});
 
 // -------------------------------------------------------------
 // AUTHENTICATION ROUTES
