@@ -5,16 +5,18 @@ import TeamMember from './models/TeamMember.js';
 import Transaction from './models/Transaction.js';
 
 export async function connectDB() {
-  const localUri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/queenpay';
+  const defaultAtlasUri = 'mongodb+srv://gr28420_db_user:e07W8NeaThZeG0ib@cluster0.kdunhec.mongodb.net/queenpay?appName=QueenPay';
+  const targetUri = process.env.MONGODB_URI || defaultAtlasUri;
 
   try {
-    console.log(`Connecting to local MongoDB at: ${localUri}...`);
-    await mongoose.connect(localUri, {
-      serverSelectionTimeoutMS: 3000
+    const masked = targetUri.replace(/:([^:@]+)@/, ':****@');
+    console.log(`Connecting to MongoDB at: ${masked}...`);
+    await mongoose.connect(targetUri, {
+      serverSelectionTimeoutMS: 6000
     });
-    console.log('✅ Connected successfully to local MongoDB daemon!');
+    console.log('✅ Connected successfully to MongoDB!');
   } catch (err) {
-    console.log('⚠️ Local MongoDB daemon not running on port 27017. Starting fallback MongoDB instance...');
+    console.log('⚠️ Primary MongoDB connection failed. Starting fallback MongoDB instance...', err.message);
     try {
       const { MongoMemoryServer } = await import('mongodb-memory-server');
       const mongoServer = await MongoMemoryServer.create();
