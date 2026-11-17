@@ -5,7 +5,7 @@ import TeamMember from './models/TeamMember.js';
 import Transaction from './models/Transaction.js';
 
 export async function connectDB() {
-  const localUri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/elephant_pay';
+  const localUri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/queenpay';
 
   try {
     console.log(`Connecting to local MongoDB at: ${localUri}...`);
