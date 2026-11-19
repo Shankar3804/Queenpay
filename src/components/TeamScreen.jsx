@@ -11,7 +11,7 @@ export default function TeamScreen({ showToast, currentUser, stats }) {
 
   const inviteUrl = typeof window !== 'undefined' && window.location.origin
     ? `${window.location.origin}/?ref=${referralCode}`
-    : `https://flashpayiinr.vercel.app/?ref=${referralCode}`;
+    : `https://queenpay-lyart.vercel.app/?ref=${referralCode}`;
 
   const [teamData, setTeamData] = useState({
     commission: Number(currentUser?.teamCommission || stats?.teamCommission || 0),

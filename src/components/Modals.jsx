@@ -1852,19 +1852,19 @@ export default function Modals({ modalType, modalData, closeModal, showToast, ad
                     Official Telegram Channel
                   </div>
                   <a
-                    href="https://t.me/Flashpayofficiall"
+                    href="https://t.me/QueenPayIndiaofficial"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ fontSize: '12px', color: '#0284c7', fontWeight: '600', textDecoration: 'none', wordBreak: 'break-all' }}
                   >
-                    https://t.me/Flashpayofficiall
+                    https://t.me/QueenPayIndiaofficial
                   </a>
                 </div>
               </div>
 
               <div style={{ display: 'flex', gap: '8px' }}>
                 <a
-                  href="https://t.me/Flashpayofficiall"
+                  href="https://t.me/QueenPayIndiaofficial"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-black"
@@ -1887,7 +1887,7 @@ export default function Modals({ modalType, modalData, closeModal, showToast, ad
                 </a>
                 <button
                   type="button"
-                  onClick={() => handleCopyContact('https://t.me/Flashpayofficiall', 'channel')}
+                  onClick={() => handleCopyContact('https://t.me/QueenPayIndiaofficial', 'channel')}
                   style={{
                     padding: '9px 14px',
                     borderRadius: '8px',
@@ -1936,19 +1936,19 @@ export default function Modals({ modalType, modalData, closeModal, showToast, ad
                     Customer Support 24/7
                   </div>
                   <a
-                    href="https://t.me/Flashpayindia"
+                    href="https://t.me/QueenPayIndia"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ fontSize: '13px', color: '#0284c7', fontWeight: '700', textDecoration: 'none' }}
                   >
-                    @Flashpayindia
+                    @QueenPayIndia
                   </a>
                 </div>
               </div>
 
               <div style={{ display: 'flex', gap: '8px' }}>
                 <a
-                  href="https://t.me/Flashpayindia"
+                  href="https://t.me/QueenPayIndia"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-black"
@@ -1967,11 +1967,11 @@ export default function Modals({ modalType, modalData, closeModal, showToast, ad
                   }}
                 >
                   <ExternalLink size={13} />
-                  Chat @Flashpayindia
+                  Chat @QueenPayIndia
                 </a>
                 <button
                   type="button"
-                  onClick={() => handleCopyContact('@Flashpayindia', 'support')}
+                  onClick={() => handleCopyContact('@QueenPayIndia', 'support')}
                   style={{
                     padding: '9px 14px',
                     borderRadius: '8px',

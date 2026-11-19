@@ -120,5 +120,5 @@ npm run preview
 
 ## 📞 Support & Community
 
-- **Official Telegram Channel**: [https://t.me/Flashpayofficiall](https://t.me/Flashpayofficiall)
-- **Telegram Support**: [@Flashpayindia](https://t.me/Flashpayindia)
+- **Official Telegram Channel**: [https://t.me/QueenPayIndiaofficial](https://t.me/QueenPayIndiaofficial)
+- **Telegram Support**: [@QueenPayIndia](https://t.me/QueenPayIndia)
